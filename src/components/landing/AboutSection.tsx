@@ -3,10 +3,10 @@ import AtomDecoration from "./AtomDecoration";
 
 const AboutSection = () => {
   const stats = [
-    { icon: Users, value: "1M+", label: "Happy Kids", color: "text-atomic-blue" },
-    { icon: BookOpen, value: "500+", label: "Lessons", color: "text-atomic-green" },
-    { icon: Gamepad2, value: "100+", label: "Games", color: "text-atomic-orange" },
-    { icon: Lightbulb, value: "50+", label: "Experiments", color: "text-atomic-purple" },
+    { icon: Users, value: "Active", label: "Community", color: "text-atomic-blue" },
+    { icon: BookOpen, value: "Many", label: "Lessons", color: "text-atomic-green" },
+    { icon: Gamepad2, value: "Fun", label: "Games", color: "text-atomic-orange" },
+    { icon: Lightbulb, value: "Safe", label: "Learning", color: "text-atomic-purple" },
   ];
 
   return (
@@ -33,14 +33,14 @@ const AboutSection = () => {
             
             <p className="text-lg text-muted-foreground mb-6">
               AtomIQ transforms complex nuclear science concepts into exciting, 
-              bite-sized adventures that kids actually love! Our app uses colorful 
+              bite-sized adventures that learners actually love! Our app uses colorful 
               animations, interactive games, and friendly characters to make learning 
               about atoms, molecules, and energy an absolute blast! 💥
             </p>
             
             <p className="text-lg text-muted-foreground mb-8">
-              Designed by scientists and educators, approved by parents, and loved by 
-              millions of curious young minds around the world.
+              Designed by passionate IT students, approved by educators, and loved by 
+              curious young minds.
             </p>
             
             <div className="flex flex-wrap gap-4">

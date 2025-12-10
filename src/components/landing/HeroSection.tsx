@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Apple, PlayCircle, Sparkles, Zap } from "lucide-react";
+import { Download, Sparkles, Zap } from "lucide-react";
 import AtomDecoration from "./AtomDecoration";
+import { APP_CONFIG } from "@/config";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-hero overflow-hidden pt-16">
+    <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Floating decorations */}
       <AtomDecoration 
         className="absolute top-32 left-10 animate-float opacity-60" 
@@ -31,38 +32,37 @@ const HeroSection = () => {
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/20 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 py-20 md:py-32 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 pt-8 md:pt-16 pb-20 max-w-7xl h-full flex items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Content */}
           <div className="relative z-10 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-card rounded-full px-4 py-2 mb-6 shadow-card">
+            <div className="inline-flex items-center gap-2 bg-card rounded-full px-3 py-1.5 mb-4 shadow-card">
               <Sparkles className="w-4 h-4 text-secondary" />
-              <span className="text-sm font-medium text-muted-foreground">Learning Made Super Fun!</span>
+              <span className="text-xs md:text-sm font-medium text-muted-foreground">Learning Made Super Fun!</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Discover the 
-              <span className="text-gradient-primary"> Amazing World </span>
-              of Atoms!
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 lg:mb-6">
+              When Facts Are Clear, 
+              <span className="text-gradient-primary block"> There's Nothing to Fear!</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
-              Join millions of young scientists exploring nuclear science through fun games, 
-              cool experiments, and exciting adventures! 🚀
+            <p className="text-base md:text-lg text-muted-foreground mb-6 lg:mb-8 max-w-lg mx-auto lg:mx-0">
+              Join our community of young scientists debunking myths and exploring the true science behind nuclear energy through fun games and adventures! 🚀
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="xl" className="group">
-                <Apple className="w-6 h-6" />
-                <span>App Store</span>
-              </Button>
-              <Button variant="warm" size="xl" className="group">
-                <PlayCircle className="w-6 h-6" />
-                <span>Google Play</span>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="group text-base px-8 h-12"
+                onClick={() => window.location.href = APP_CONFIG.downloadLink}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                <span>Download APK</span>
               </Button>
             </div>
             
-            <div className="flex items-center gap-6 mt-8 justify-center lg:justify-start">
+            <div className="flex items-center gap-4 lg:gap-6 mt-6 lg:mt-8 justify-center lg:justify-start">
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4].map((i) => (
                   <div 
@@ -79,54 +79,32 @@ const HeroSection = () => {
                     <Zap key={i} className="w-4 h-4 fill-current" />
                   ))}
                 </div>
-                <p className="text-sm text-muted-foreground">1M+ Happy Young Scientists</p>
+                <p className="text-sm text-muted-foreground">Growing Community of Young Minds</p>
               </div>
             </div>
           </div>
           
-          {/* Phone Mockup */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Phone frame */}
-              <div className="relative w-72 h-[580px] bg-foreground rounded-[3rem] p-3 shadow-2xl hover-bounce">
-                <div className="w-full h-full bg-gradient-primary rounded-[2.5rem] overflow-hidden relative">
-                  {/* Screen content */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-primary-foreground">
-                    <div className="w-20 h-20 bg-primary-foreground/20 rounded-3xl flex items-center justify-center mb-4 animate-bounce-soft">
-                      <span className="text-4xl">⚛️</span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-center mb-2">AtomIQ</h3>
-                    <p className="text-center text-primary-foreground/80 text-sm">
-                      Explore atoms, molecules, and the amazing world of science!
-                    </p>
-                    <div className="mt-8 w-full space-y-3">
-                      {["Start Learning", "Fun Experiments", "Quiz Time!"].map((text, i) => (
-                        <div 
-                          key={i}
-                          className="bg-primary-foreground/20 rounded-xl p-3 text-center font-medium hover:bg-primary-foreground/30 transition-colors cursor-pointer"
-                        >
-                          {text}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                {/* Notch */}
-                <div className="absolute top-6 left-1/2 -translate-x-1/2 w-24 h-6 bg-foreground rounded-full" />
-              </div>
+          {/* Hero Image */}
+          <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+            <div className="relative w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px]">
+              <img 
+                src="/images/hero.png" 
+                alt="AtomIQ App Interface" 
+                className="w-full h-auto drop-shadow-2xl hover-bounce"
+              />
               
               {/* Floating badges */}
-              <div className="absolute -left-12 top-20 bg-card rounded-2xl p-4 shadow-card animate-float">
+              <div className="absolute -left-12 top-20 bg-card rounded-2xl p-4 shadow-card animate-float hidden md:block">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🧪</span>
-                  <span className="font-semibold text-sm">100+ Experiments</span>
+                  <span className="font-semibold text-sm">Fun Experiments</span>
                 </div>
               </div>
               
-              <div className="absolute -right-8 bottom-32 bg-card rounded-2xl p-4 shadow-card animate-float-delayed">
+              <div className="absolute -right-8 bottom-32 bg-card rounded-2xl p-4 shadow-card animate-float-delayed hidden md:block">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🏆</span>
-                  <span className="font-semibold text-sm">Award Winner!</span>
+                  <span className="font-semibold text-sm">Gamified Learning</span>
                 </div>
               </div>
             </div>

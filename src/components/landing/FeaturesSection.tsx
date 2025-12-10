@@ -1,42 +1,30 @@
-import { Brain, Gamepad2, Medal, Microscope, Palette, Shield } from "lucide-react";
+import { Bot, Gamepad2, Users, ShieldCheck } from "lucide-react";
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: Microscope,
-      title: "Virtual Lab",
-      description: "Conduct safe, virtual experiments and watch atoms come alive in stunning 3D animations!",
-      color: "bg-atomic-blue",
-    },
-    {
       icon: Gamepad2,
-      title: "Fun Games",
-      description: "Learn through play with exciting puzzle games, quizzes, and atom-building challenges!",
+      title: "Gamified Learning Path: The Mission",
+      description: "Embark on an epic journey to save the atomic world! Complete daily quests, earn XP, and unlock new levels.",
       color: "bg-atomic-orange",
     },
     {
-      icon: Brain,
-      title: "Smart Learning",
-      description: "AI-powered lessons that adapt to your child's pace and learning style.",
-      color: "bg-atomic-purple",
+      icon: ShieldCheck,
+      title: "Myth Busters Module",
+      description: "Challenge misconceptions and discover the truth behind nuclear science with our interactive fact-checking games.",
+      color: "bg-atomic-blue",
     },
     {
-      icon: Medal,
-      title: "Earn Rewards",
-      description: "Collect badges, unlock achievements, and become a certified Young Scientist!",
-      color: "bg-atomic-yellow",
-    },
-    {
-      icon: Palette,
-      title: "Creative Mode",
-      description: "Design your own molecules, create atomic art, and share with friends!",
+      icon: Users,
+      title: "Community",
+      description: "Connect with fellow young scientists, share your achievements, and participate in global challenges together.",
       color: "bg-atomic-green",
     },
     {
-      icon: Shield,
-      title: "Parent Controls",
-      description: "Full parental controls, progress tracking, and zero ads. 100% kid-safe!",
-      color: "bg-atomic-pink",
+      icon: Bot,
+      title: "Ask Schrodi",
+      description: "Meet your personal AI lab assistant! Schrodi is always ready to answer your questions and help you with tricky concepts.",
+      color: "bg-atomic-purple",
     },
   ];
 
@@ -53,7 +41,7 @@ const FeaturesSection = () => {
           </span>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Everything Kids Need to 
+            Everything Learners Need to 
             <span className="text-gradient-primary"> Love Science!</span>
           </h2>
           
@@ -63,7 +51,7 @@ const FeaturesSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {features.map((feature, index) => (
             <div 
               key={index}

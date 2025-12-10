@@ -1,22 +1,18 @@
-import { Atom, Heart, Mail } from "lucide-react";
+import { Heart } from "lucide-react";
+import { APP_CONFIG } from "@/config";
 
 const Footer = () => {
   const links = {
     product: [
       { label: "Features", href: "#features" },
       { label: "Screenshots", href: "#screenshots" },
-      { label: "Pricing", href: "#" },
-      { label: "Download", href: "#" },
+      { label: "Download APK", href: APP_CONFIG.downloadLink },
     ],
     company: [
       { label: "About Us", href: "#about" },
       { label: "Team", href: "#team" },
-      { label: "Careers", href: "#" },
-      { label: "Press Kit", href: "#" },
     ],
     support: [
-      { label: "Help Center", href: "#" },
-      { label: "Contact Us", href: "#" },
       { label: "Privacy Policy", href: "#" },
       { label: "Terms of Service", href: "#" },
     ],
@@ -29,19 +25,17 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center gap-2 mb-4">
-              <Atom className="w-8 h-8 text-secondary" />
+              <img 
+                src="/images/icon.png" 
+                alt="AtomIQ Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <span className="text-2xl font-bold">AtomIQ</span>
             </a>
             <p className="text-primary-foreground/70 mb-6 max-w-sm">
               Making nuclear science fun and accessible for young minds around the world. 
               Spark curiosity, ignite passion! 🚀
             </p>
-            <div className="flex items-center gap-2 text-primary-foreground/70">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:hello@atomiq.app" className="hover:text-secondary transition-colors">
-                hello@atomiq.app
-              </a>
-            </div>
           </div>
           
           {/* Links */}
@@ -97,10 +91,10 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 AtomIQ. All rights reserved.
+            © 2025 AtomIQ. All rights reserved.
           </p>
           <p className="text-primary-foreground/60 text-sm flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-destructive fill-destructive" /> for curious kids everywhere
+            Made with <Heart className="w-4 h-4 text-destructive fill-destructive" /> for curious learners everywhere
           </p>
         </div>
       </div>

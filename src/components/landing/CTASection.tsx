@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Apple, PlayCircle, Rocket } from "lucide-react";
+import { Download, Rocket } from "lucide-react";
 import AtomDecoration from "./AtomDecoration";
+import { APP_CONFIG } from "@/config";
 
 const CTASection = () => {
   return (
@@ -29,29 +30,23 @@ const CTASection = () => {
           </h2>
           
           <p className="text-xl opacity-90 mb-8">
-            Download AtomIQ now and watch your child fall in love with science!
+            Download AtomIQ now and watch your learner fall in love with science!
             Free to start, endless fun to discover! 🌟
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="xl" 
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-xl hover:-translate-y-2 transition-all"
+              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-xl hover:-translate-y-2 transition-all px-8"
+              onClick={() => window.location.href = APP_CONFIG.downloadLink}
             >
-              <Apple className="w-6 h-6" />
-              <span>Download for iOS</span>
-            </Button>
-            <Button 
-              size="xl" 
-              className="bg-primary-foreground/20 text-primary-foreground border-2 border-primary-foreground/50 hover:bg-primary-foreground/30 shadow-xl hover:-translate-y-2 transition-all"
-            >
-              <PlayCircle className="w-6 h-6" />
-              <span>Download for Android</span>
+              <Download className="w-6 h-6 mr-2" />
+              <span>Download APK</span>
             </Button>
           </div>
           
           <p className="mt-8 text-sm opacity-70">
-            ✓ Free to download &nbsp; ✓ No ads &nbsp; ✓ 100% kid-safe
+            ✓ Free to download &nbsp; ✓ No ads &nbsp; ✓ 100% learner-safe
           </p>
         </div>
       </div>

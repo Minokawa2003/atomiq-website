@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Atom, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { APP_CONFIG } from "@/config";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +19,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className="relative">
-              <Atom className="w-8 h-8 text-primary group-hover:animate-spin-slow transition-all" />
-              <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
+            <div className="relative w-10 h-10 flex items-center justify-center">
+              <img 
+                src="/images/icon.png" 
+                alt="AtomIQ Logo" 
+                className="w-10 h-10 object-contain group-hover:scale-110 transition-transform"
+              />
             </div>
             <span className="text-xl font-bold text-gradient-primary">AtomIQ</span>
           </a>
@@ -41,8 +45,12 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Download Now
+            <Button 
+              variant="hero" 
+              size="sm"
+              onClick={() => window.location.href = APP_CONFIG.downloadLink}
+            >
+              Download APK
             </Button>
           </div>
 
@@ -69,8 +77,13 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="mt-2">
-                Download Now
+              <Button 
+                variant="hero" 
+                size="sm" 
+                className="mt-2"
+                onClick={() => window.location.href = APP_CONFIG.downloadLink}
+              >
+                Download APK
               </Button>
             </div>
           </div>
