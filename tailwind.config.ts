@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        fredoka: ["Fredoka", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,11 +60,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        atomic: {
+          blue: "hsl(var(--atomic-blue))",
+          orange: "hsl(var(--plasma-orange))",
+          green: "hsl(var(--radioactive-green))",
+          yellow: "hsl(var(--sunny-yellow))",
+          purple: "hsl(var(--electron-purple))",
+          pink: "hsl(var(--neutron-pink))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "calc(var(--radius) + 4px)",
+        "2xl": "calc(var(--radius) + 8px)",
+        "3xl": "calc(var(--radius) + 16px)",
       },
       keyframes: {
         "accordion-down": {
