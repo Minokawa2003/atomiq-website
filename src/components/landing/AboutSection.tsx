@@ -44,7 +44,7 @@ const AboutSection = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              {["Ages 6-12", "Ad-Free", "Offline Mode", "Safe & Secure"].map((badge) => (
+              {["For Learners", "Ad-Free", "Offline Mode", "Safe & Secure"].map((badge) => (
                 <span 
                   key={badge}
                   className="bg-muted px-4 py-2 rounded-xl text-sm font-medium text-muted-foreground"
